@@ -1,7 +1,7 @@
-import { memo } from "react";
+import React from "react";
 
-const List = ({ items }) => {
-  console.log("List component rendered");
+const List = React.memo(({ items }) => {
+  console.log("리스트 컴포넌트 렌더링됨");
   return (
     <ul>
       {items.map((item, index) => (
@@ -9,6 +9,6 @@ const List = ({ items }) => {
       ))}
     </ul>
   );
-};
+});
 
-export default memo(List);
+export default List;
